@@ -21,6 +21,7 @@ int fun1(int n)
     }
     return 0;
 }
+
 // Global Variable (gives the same result)
 int y = 0;
 int fun2(int n)
@@ -32,6 +33,7 @@ int fun2(int n)
     }
     return 0;
 }
+
 int main()
 {
     int r, r1, r2;
