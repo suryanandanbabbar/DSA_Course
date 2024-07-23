@@ -14,13 +14,13 @@ int sum(int n)
     }
 }
 
-// Using Formula
+// Using Formula -> O(1)
 int sum2(int n)
 {
     return (n * (n + 1)) / 2;
 }
 
-// Using Loops
+// Using Loops -> O(n)
 int sum3(int n)
 {
     int sum = 0;
