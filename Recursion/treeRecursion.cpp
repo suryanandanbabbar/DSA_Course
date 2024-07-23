@@ -7,7 +7,7 @@ void fun(int n)
     {
         printf("%d ", n);
         cout << n << " ";
-        
+
         fun(n - 1);
         fun(n - 1);
     }
