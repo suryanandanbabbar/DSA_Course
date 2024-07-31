@@ -88,58 +88,70 @@ int main()
 {
     struct Array arr = {{2, 3, 4, 5, 6}, 10, 5};
 
-    cout << "Type the operation: " << endl;
-    cout << "'1' for get" << endl;
-    cout << "'2' for set" << endl;
-    cout << "'3' for max" << endl;
-    cout << "'4' for min" << endl;
-    cout << "'5' for sum" << endl;
-    cout << "'6' for avg" << endl;
+    int x, n, a, b;
+    
+    // Menu
+    do
+    {
 
-    int n;
-    cout << "Enter the number: ";
-    cin >> n;
+        cout << "Type the operation: " << endl;
+        cout << "'1' for get" << endl;
+        cout << "'2' for set" << endl;
+        cout << "'3' for max" << endl;
+        cout << "'4' for min" << endl;
+        cout << "'5' for sum" << endl;
+        cout << "'6' for avg" << endl;
+        cout << "'7' for exit" << endl;
 
-    if (n == 1)
-    {
-        int x;
-        cout << "Enter the index to get: ";
-        cin >> x;
-        cout << get(arr, x) << endl;
-    }
-    else if (n == 2)
-    {
-        int x, y;
-        cout << "Enter the index to set: ";
-        cin >> x;
-        cout << "Enter the number to set: ";
-        cin >> y;
-        set(&arr, x, y);
-        displayArray(arr);
-    }
-    else if (n == 3)
-    {
-        cout << "Maximum Element: ";
-        cout << max(arr) << endl;
-    }
-    else if (n == 4)
-    {
-        cout << "Minimum Element: ";
-        cout << min(arr) << endl;
-    }
-    else if (n == 5)
-    {
-        cout << "Sum of Elements: ";
-        cout << sum(arr) << endl;
-    }
-    else if (n == 6)
-    {
-        cout << "Avg of Elements: ";
-        cout << avg(arr) << endl;
-    }
-    else
-    {
-        cout << "Invalid Input\n";
-        return 0;
-    }
+        
+        cout << "Enter the number: ";
+        cin >> n;
+
+        switch (n)
+        {
+        // get()
+        case 1:
+
+            cout << "Enter the index to get: ";
+            cin >> x;
+            cout << get(arr, x) << endl;
+            break;
+
+        // set()
+        case 2:
+
+            cout << "Enter the index to set: ";
+            cin >> a;
+            cout << "Enter the number to set: ";
+            cin >> b;
+            set(&arr, a, b);
+            displayArray(arr);
+            break;
+
+        // max()
+        case 3:
+            cout << "Maximum Element: ";
+            cout << max(arr) << endl;
+            break;
+
+        // min()
+        case 4:
+            cout << "Minimum Element: ";
+            cout << min(arr) << endl;
+            break;
+
+        // sum()
+        case 5:
+            cout << "Sum of Elements: ";
+            cout << sum(arr) << endl;
+            break;
+
+        // avg()
+        case 6:
+            cout << "Avg of Elements: ";
+            cout << avg(arr) << endl;
+            break;
+        }
+    } while (n < 6);
+    
 }

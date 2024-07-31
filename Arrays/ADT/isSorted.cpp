@@ -41,6 +41,7 @@ int isSorted(struct Array arr)
 
 int rearrange(struct Array *arr)
 {
+    int *x, *y;
     int i = 0;
     int j = arr->length - 1;
 
@@ -51,8 +52,13 @@ int rearrange(struct Array *arr)
         while (arr->A[j] >= 0)
             j--;
 
-        // if (i < j)
-        // swap(&arr->A[i],&arr->A[j]);
+        if (i < j)
+        {
+            int temp;
+            temp = *x;
+            *x = *y;
+            *y = temp;
+        }
     }
 }
 
